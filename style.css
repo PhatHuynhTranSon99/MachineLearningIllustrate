@@ -1,0 +1,124 @@
+/* Basic reset */
+*, html, body {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Font setting */
+body {
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Styling for navigation */
+.nav-list {
+    position: fixed;
+    list-style-type: none;
+    background-color: rgba(196, 196, 196, 0.2);
+    width: 100%;
+    height: 50px;
+}
+
+.nav-list::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.nav-list-item {
+    height: 100%;
+    width: 33.33%;
+    float: left;
+    text-align: center;
+    margin-top: auto;
+    position: relative;
+}
+
+.nav-list-item a {
+    /* Centering */
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    /* Text styling */
+    text-decoration: none;
+    color: #000000;
+    font-size: 1.1rem;
+
+    /* Transition */
+    transition: color linear 0.2s;
+}
+
+.nav-list-item a:hover {
+    color: #4895EF;
+}
+
+/* Styling for main */
+
+/* Styling for section */
+.algo-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    height: 90vh;
+}
+
+.algo-section-left {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    padding-top: 4rem;
+    padding-left: 3rem;
+}
+
+.algo-section-right {
+    width: 40%;
+}
+
+.algo-section-title {
+    font-size: 4rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    letter-spacing: 2px;
+}
+
+.linear-title {
+    color: #219ebc;
+}
+
+.logistic-title {
+    color: #e76f51;
+}
+
+.pca-title {
+    color: #ffb703;
+}
+
+.algo-section-text {
+    font-size: 1.1rem;
+    line-height: 1.5rem;
+}
+
+/* Animation */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+.fade-in {
+    animation-name: fadeIn;
+    animation-duration: 3s;
+    animation-fill-mode: backwards;
+}
