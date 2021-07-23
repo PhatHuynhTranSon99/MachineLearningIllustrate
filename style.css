@@ -62,7 +62,7 @@ body {
 .algo-section {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-around;
     height: 90vh;
 }
 
@@ -78,6 +78,9 @@ body {
 
 .algo-section-right {
     width: 40%;
+    display: flex;
+    align-items: center;
+    padding-top: 4rem;
 }
 
 .algo-section-title {
@@ -121,4 +124,59 @@ body {
     animation-name: fadeIn;
     animation-duration: 3s;
     animation-fill-mode: backwards;
+}
+
+/* Button */
+.button {
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+    display: block;
+    width: 100%;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.linear-button {
+    background-color: #4895EF; 
+}
+
+.linear-button:hover {
+    background-color: #7db8fc;
+}
+
+.linear-button:active {
+    background-color: #248aff;
+}
+
+/* Illustration */
+.linear-illustration {
+    margin-right: 1rem;
+}
+
+.linear-graph {
+    border: 3px solid #000000;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+}
+
+.linear-equation {
+    height: 100%;
+    width: 25%;
+}
+
+.equation-title {
+    font-size: 1rem;
+    font-weight: normal;
+    text-align: center;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.equation {
+    border: 2px solid #e5e5e5;
+    border-radius: 10px;
+    padding: 5px 10px;
+    text-align: center;
 }
