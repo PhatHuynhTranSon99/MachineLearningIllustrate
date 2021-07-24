@@ -138,30 +138,30 @@ body {
     cursor: pointer;
 }
 
-.linear-button {
+.primary-button {
     background-color: #4895EF; 
 }
 
-.linear-button:hover {
+.primary-button:hover {
     background-color: #7db8fc;
 }
 
-.linear-button:active {
+.primary-button:active {
     background-color: #248aff;
 }
 
 /* Illustration */
-.linear-illustration {
+.illustration-section {
     margin-right: 1rem;
 }
 
-.linear-graph {
+.graph {
     border: 3px solid #000000;
     border-radius: 10px;
     margin-bottom: 1rem;
 }
 
-.linear-equation {
+.equation-section {
     height: 100%;
     width: 25%;
 }

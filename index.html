@@ -35,14 +35,14 @@
             </div>
 
             <div class="algo-section-right">
-                <div class="linear-illustration">
-                    <div class="linear-graph"></div>
-                    <button class="button linear-button">
+                <div class="illustration-section">
+                    <div class="graph linear-graph"></div>
+                    <button class="button primary-button">
                         Reset points
                     </button>
                 </div>
 
-                <div class="linear-equation">
+                <div class="equation-section">
                     <h2 class="equation-title">Equation</h2>
                     <p class="equation">x + 2y = 100</p>
                     <h2 class="loss-title">Loss</h2>
@@ -61,7 +61,21 @@
             </div>
 
             <div class="algo-section-right">
-                
+                <div class="illustration-section">
+                    <div class="graph logistic-graph"></div>
+                    <div class="button-row">
+                        <button class="button">Use green</button>
+                        <button class="button">Use red</button>
+                    </div>
+                    <button class="button primary-button">Reset points</button>
+                </div>
+
+                <div class="equation-section">
+                    <h2 class="equation-title">Equation</h2>
+                    <p class="equation">x + 2y = 100</p>
+                    <h2 class="loss-title">Loss</h2>
+                    <p class="loss">x + 2y = 100</p>
+                </div>
             </div>
         </section>
 
@@ -82,7 +96,8 @@
 
     <!--Scripts for d3-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.0.0/d3.min.js"></script>
-    <!--Own scripts-->
+    <!--Own scripts (linear, logistic and pcd)-->
     <script src="linear.js"></script>
+    <script src="logistic.js"></script>
 </body>
 </html>
