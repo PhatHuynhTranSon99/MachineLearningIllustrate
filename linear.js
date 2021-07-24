@@ -1,5 +1,5 @@
 //MVCish (i don't know if this is even legal)
-var view = {
+var linearView = {
     width: 350,
     height: 350,
     scaleY: d3.scaleLinear().domain([350, 0]).range([0, 1]),
@@ -10,6 +10,7 @@ var view = {
         //Create svg element to hold graph
         this.svg = d3.select(".linear-graph")
             .append("svg")
+            .style("transform", "translateY(2px)")
             .attr("width", this.width)
             .attr("height", this.height);
 
@@ -112,7 +113,7 @@ var view = {
 }
 
 //Linear regression model
-var model = {
+var linearModel = {
     //Parameter to be trained
     b0: 0,
     b1: 0,
@@ -186,14 +187,14 @@ var model = {
     }
 }
 
-var controller = {
-    view: view,
-    model: model,
+var linearController = {
+    view: linearView,
+    model: linearModel,
     trainingAllowed: true,
     init() {
-        view.init();
-        view.setOnClick((coords) => this.onPointChosen(coords));
-        view.setResetButtonOnClick(() => this.onResetButtonClick());
+        this.view.init();
+        this.view.setOnClick((coords) => this.onPointChosen(coords));
+        this.view.setResetButtonOnClick(() => this.onResetButtonClick());
     },
     onPointChosen(coords) {
         this.view.appendPointToCanvas(coords);
@@ -216,11 +217,11 @@ var controller = {
     },
     train() {
         setTimeout(() => {
-            this.model.fit(this.onParameter);
+            this.model.fit((loss, b0, b1) => this.onParameter(loss, b0, b1));
             if (!this.model.hasConverged()) this.train();
         }, 10);
     }
 }
 
 //Run
-controller.init();
+linearController.init();
