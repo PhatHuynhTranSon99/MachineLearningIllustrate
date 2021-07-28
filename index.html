@@ -90,18 +90,20 @@
 
             <div class="algo-section-right">
                 <div class="illustration-section">
-                    <div class="graph"></div>
-                    <button class="button secondary-button margin-bottom-small">Find PCA</button>
-                    <button class="button warning-button">Reset points</button>
+                    <div class="graph pca-graph"></div>
+                    <button class="button secondary-button margin-bottom-small pca-find-button">Find PCA</button>
+                    <button class="button warning-button pca-reset-button">Reset points</button>
                 </div>
             </div>
         </section>
     </main>
 
-    <!--Scripts for d3-->
+    <!--Scripts for d3.js and math.js-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.0.0/d3.min.js"></script>
+    <script src="https://pagecdn.io/lib/mathjs/7.1.0/math.min.js"></script>
     <!--Own scripts (linear, logistic and pcd)-->
     <script src="linear.js"></script>
     <script src="logistic.js"></script>
+    <script src="pca.js"></script>
 </body>
 </html>

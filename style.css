@@ -67,11 +67,11 @@ body {
 
 .algo-section-left {
     width: 30%;
+    min-width: 400px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     height: 100%;
-    padding-top: 4rem;
     padding-left: 3rem;
 }
 
