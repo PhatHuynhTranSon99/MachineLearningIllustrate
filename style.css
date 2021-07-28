@@ -126,30 +126,6 @@ body {
     animation-fill-mode: backwards;
 }
 
-/* Button */
-.button {
-    padding: 1rem 2rem;
-    font-size: 1.1rem;
-    display: block;
-    width: 100%;
-    border: none;
-    color: white;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.primary-button {
-    background-color: #4895EF; 
-}
-
-.primary-button:hover {
-    background-color: #7db8fc;
-}
-
-.primary-button:active {
-    background-color: #248aff;
-}
-
 /* Illustration */
 .illustration-section {
     margin-right: 1rem;
@@ -179,4 +155,68 @@ body {
     border-radius: 10px;
     padding: 5px 10px;
     text-align: center;
+}
+/* Button */
+.button {
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+    display: block;
+    width: 100%;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Button row */
+.button-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+}
+
+.button-row button {
+    margin-right: 1rem;
+}
+
+.button-row button:last-child {
+    margin-right: 0;
+}
+
+/* Type of buttons */
+.primary-button {
+    background-color: #4895EF; 
+}
+
+.primary-button:hover {
+    background-color: #7db8fc;
+}
+
+.primary-button:active {
+    background-color: #248aff;
+}
+
+.secondary-button {
+    background-color: #2A9D8F;
+}
+
+.secondary-button:hover {
+    background-color:#71b3ab;
+}
+
+.secondary-button:active {
+    background-color: #008b7b;
+}
+
+.warning-button {
+    background-color: #E63946;
+}
+
+.warning-button:hover {
+    background-color: #fd5a68;
+
+}
+
+.warning-button:active {
+    background-color: #b9000f;
 }

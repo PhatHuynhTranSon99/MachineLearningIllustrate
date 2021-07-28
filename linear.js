@@ -85,11 +85,11 @@ var linearView = {
     },
     displayEquation(b0, b1) {
         //TODO
-        document.querySelector(".equation")
+        document.querySelector(".linear-equation")
             .textContent = `y = ${b0.toFixed(2)} + ${b1.toFixed(2)}x`;
     },
     displayLoss(loss) {
-        document.querySelector(".loss")
+        document.querySelector(".linear-loss")
             .textContent = `${(loss * 100).toFixed(2)} * 10e^-2`;
     },
     setResetButtonOnClick(onClick) {
@@ -141,6 +141,10 @@ var linearModel = {
     },
     //Method to train on data   
     fit(parameterHandler, step=0.1) {
+        if (this.data.length == 0) {
+            this.converged = true;
+            return;
+        }
         //Calculate gradient for dB0 and dB1
         let dB0 = 0;
         let dB1 = 0;
@@ -191,6 +195,7 @@ var linearController = {
     view: linearView,
     model: linearModel,
     trainingAllowed: true,
+    timeOutId: null,
     init() {
         this.view.init();
         this.view.setOnClick((coords) => this.onPointChosen(coords));
@@ -200,13 +205,15 @@ var linearController = {
         this.view.appendPointToCanvas(coords);
         this.model.addData(coords);
         this.model.resetConverge();
+        if (this.timeOutId) clearInterval(this.timeOutId);
         this.train();
     },
     onResetButtonClick() {
-        //Clear all points
-        this.view.reset();
+        if (this.timeOutId) clearInterval(this.timeOutId);
         //Reset model
         this.model.reset();
+        //Clear all points
+        this.view.reset();
     },
     onParameter(loss, b0, b1) {
         //Display equation and loss
@@ -216,10 +223,11 @@ var linearController = {
         this.view.renderLine(b0, b1);
     },
     train() {
-        setTimeout(() => {
+        this.timeOutId = setInterval(() => {
+            console.log("run");
             this.model.fit((loss, b0, b1) => this.onParameter(loss, b0, b1));
-            if (!this.model.hasConverged()) this.train();
-        }, 10);
+            if (this.model.hasConverged()) clearInterval(this.timeOutId);
+        }, 5);
     }
 }
 
