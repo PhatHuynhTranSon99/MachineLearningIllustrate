@@ -217,3 +217,8 @@ body {
 .warning-button:active {
     background-color: #b9000f;
 }
+
+/* Space styling */
+.margin-bottom-small {
+    margin-bottom: 1rem;
+}
