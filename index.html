@@ -11,21 +11,21 @@
     <nav class="navigation">
         <ul class="nav-list">
             <li class="nav-list-item">
-                <a href="" class="nav-list-link">Linear Regression</a>
+                <a href="#linear-section" class="nav-list-link">Linear Regression</a>
             </li>
 
             <li class="nav-list-item">
-                <a href="" class="nav-list-link">Logistic Regression</a>
+                <a href="#log-section" class="nav-list-link">Logistic Regression</a>
             </li>
 
             <li class="nav-list-item">
-                <a href="" class="nav-list-link">PCA</a>
+                <a href="#pca-section" class="nav-list-link">PCA</a>
             </li>
         </ul>
     </nav>
 
     <main>
-        <section class="algo-section linear">
+        <section class="algo-section linear" id="linear-section">
             <div class="algo-section-left">
                 <h1 class="algo-section-title linear-title fade-in">Linear Regression</h1>
                 <p class="algo-section-text">
@@ -51,7 +51,7 @@
             </div>
         </section>
 
-        <section class="algo-section logistic">
+        <section class="algo-section logistic" id="log-section">
             <div class="algo-section-left">
                 <h1 class="algo-section-title logistic-title fade-in">Logistic Regression</h1>
                 <p class="algo-section-text">
@@ -79,7 +79,7 @@
             </div>
         </section>
 
-        <section class="algo-section pca">
+        <section class="algo-section pca" id="pca-section">
             <div class="algo-section-left">
                 <h1 class="algo-section-title pca-title fade-in">PCA</h1>
                 <p class="algo-section-text">
@@ -101,9 +101,10 @@
     <!--Scripts for d3.js and math.js-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.0.0/d3.min.js"></script>
     <script src="https://pagecdn.io/lib/mathjs/7.1.0/math.min.js"></script>
-    <!--Own scripts (linear, logistic and pcd)-->
+    <!--Own scripts (navigation setup, linear, logistic and pcd)-->
     <script src="linear.js"></script>
     <script src="logistic.js"></script>
     <script src="pca.js"></script>
+    <script src="nav.js"></script>
 </body>
 </html>
